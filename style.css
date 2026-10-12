@@ -160,3 +160,51 @@ button:hover,
 button:focus-visible {
     background-color: #2980b9;
 }
+
+
+/* Viikko 4: API-kyselyn käyttöliittymä */
+.api-ohjaimet {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.api-ohjaimet label {
+    font-weight: 600;
+}
+
+.api-ohjaimet select {
+    font: inherit;
+    padding: 10px 12px;
+    border: 1px solid #aab7c4;
+    border-radius: 6px;
+    background-color: white;
+    color: #1a252f;
+}
+
+.api-tulos {
+    white-space: pre-line;
+    line-height: 1.8;
+    background-color: #eef5fb;
+    border-left: 4px solid #2980b9;
+    border-radius: 6px;
+    padding: 14px;
+    margin: 12px 0;
+}
+
+.api-tulos:empty {
+    display: none;
+}
+
+.api-lahde {
+    color: #5c6b78;
+    font-size: 0.9rem;
+    margin-top: 12px;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
