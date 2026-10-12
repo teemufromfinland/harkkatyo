@@ -50,7 +50,7 @@ nav a {
 
 /* e) Hover-korostus linkeille */
 nav a:hover {
-    background-color: #3498db;
+    background-color: #135f8b;
     transform: translateY(-2px);
 }
 
@@ -101,12 +101,12 @@ img {
 }
 
 a {
-    color: #2980b9;
+    color: #145a86;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #16a085;
+    color: #0b4f78;
 }
 
 footer {
@@ -158,7 +158,7 @@ button {
 
 button:hover,
 button:focus-visible {
-    background-color: #2980b9;
+    background-color: #135f8b;
 }
 
 
