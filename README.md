@@ -1,12 +1,15 @@
-# Johdatus sovelluskehitykseen – viikkotehtävät 1–4 (DJ00BP24)
+# Johdatus sovelluskehitykseen – viikkotehtävät 1–5 (DJ00BP24)
 
-Tämä repositorio sisältää Johdatus sovelluskehitykseen -kurssin viikkotehtävien 1–4 lähdekoodit. Viikkojen tehtävät täydentävät samaa verkkosivustoa.
+Tämä repositorio sisältää Johdatus sovelluskehitykseen -kurssin viikkotehtävien 1–5 lähdekoodit. Viikkojen tehtävät täydentävät samaa verkkosivustoa.
+
+**Julkinen sivusto:** https://teemufromfinland.github.io/harkkatyo/
 
 - **Tekijä:** Teemu Kankainen
 - **Viikko 1, HTML:** `index.html`, `about.html`, kuvat, navigaatio ja semanttinen HTML-rakenne (osiot a–e).
 - **Viikko 2, CSS:** `style.css`, laatikkomalli, Flexbox, responsiivisuus, hover-efektit ja ulkoasu (osiot a–e).
 - **Viikko 3, JavaScript:** `script.js`, muuttujat ja konsolitulosteet, if–else, laskurifunktio, taulukko ja for-silmukka sekä HTML-painike (osiot a–e).
-- **Viikko 4, API:** `script4.js`, JavaScriptin `fetch()`, Open-Meteo-säärajapinta, JSON-vastauksen tulostus konsoliin ja sivulle, lataus- ja virheilmoitukset sekä kaupungin valinta (osiot a–d). Osio e edellyttää opiskelijan omaa kokeilua.
+- **Viikko 4, API:** `script4.js`, JavaScriptin `fetch()`, Open-Meteo-säärajapinta, JSON-vastauksen tulostus konsoliin ja sivulle, lataus- ja virheilmoitukset sekä kaupungin valinta. Omaa rajapintakokeilua testattiin muuttamalla koordinaatteja (osiot a–e).
+- **Viikko 5, julkaisu ja laadunvarmistus:** GitHub Pages -julkaisu, automaattinen päivitys `main`-haarasta (CI/CD), Lighthouse, W3C HTML Validator ja kontrastikorjaus (osiot a–e).
 
 ## Kokeile viikkotehtävää 3
 
@@ -31,7 +34,7 @@ Tämä repositorio sisältää Johdatus sovelluskehitykseen -kurssin viikkoteht�
 - **b:** API-vastaus tulostetaan sivulla olevaan HTML-elementtiin.
 - **c:** CSS-muotoilu, latausteksti ja virhetilanteen käsittely.
 - **d:** Kaupunki valitaan pudotusvalikosta ja haetaan valitun kaupungin tiedot.
-- **e:** Opiskelija kokeilee avointa rajapintaa itsenäisesti yllä olevien ohjeiden avulla.
+- **e:** Avoimen rajapinnan vastausta kokeiltiin itsenäisesti vaihtamalla koordinaattiparametreja; tulokset dokumentoitiin kuvakaappauksin.
 
 **Rajapinta:** [Open-Meteo](https://open-meteo.com/en/docs), ei vaadi API-avainta tähän ei-kaupalliseen kurssiharjoitukseen. Säädata tulee rajapinnasta, eikä sitä ole kirjoitettu valmiiksi sivulle.
 
@@ -39,13 +42,16 @@ Viikkojen 1–2 HTML- ja CSS-ratkaisut on toteutettu käsin Texturilla. Viikkoje
 
 ## Viikko 5 – GitHub Pages, CI/CD ja laadunvarmistus
 
-Tavoitteena on julkaista tämä sama repositorio GitHub Pagesiin ja testata, että `main`-haaran uusi commit näkyy sivustolla automaattisesti. Sivuston julkaisu ja laaturaportit ovat tätä README-päivitystä tehtäessä vielä kesken.
+**Julkinen osoite:** https://teemufromfinland.github.io/harkkatyo/
 
-1. Ota GitHubissa Pages käyttöön: **Settings → Pages → Deploy from a branch → main → / (root) → Save**.
-2. Avaa sivun julkinen osoite GitHub Pagesin ilmoituksesta ja varmista, että kaikki sivut, kuvat ja sääpainike toimivat.
-3. Tee pieni uusi commit `index.html`-tiedostoon ja todenna sen automaattinen päivittyminen julkiselle sivulle (CI/CD-koe).
-4. Aja julkaistulle sivulle Lighthouse ja tallenna tuloskuva loppuraportin lukuun 6.
-5. Tarkista HTML W3C:n validatorilla, korjaa mahdollinen huomautus tai kirjaa raporttiin puhdas testitulos.
-6. Tulkitse tuloksia ja kuvaa tehdyt parannukset tai pohdi tilaajan liiketoimintahyötyjä loppuraportissa.
+Viikon 5 toteutukset ja testitulokset 12.10.2026:
 
-Viikon 5 Moodle-palautukseen tarvitaan erillinen .txt-tiedosto, jossa on sekä repositorion linkki että todettu, toimiva julkaisulinkki.
+- **a / GitHub Pages:** Julkinen projekti julkaistiin GitHub Pagesissa `main`-haaran juurikansiosta.
+- **b / CI/CD:** Etusivulle lisättiin GitHub-commitilla näkyvä teksti "Viikko 5: Sivusto julkaistu GitHub Pagesilla – automaattisen julkaisun testimuutos 12.10.2026." GitHubin Pages build and deployment #2 valmistui onnistuneesti, ja tekstin näkyminen julkisella sivulla varmistettiin.
+- **c / Lighthouse (Desktop):** Ensimmäinen testi: Performance 100, Accessibility 96, Best Practices 100, SEO 100. Uusintatesti korjauksen jälkeen: kaikki neljä tulosta 100/100.
+- **d / W3C Nu Html Checker:** Julkaistu `index.html` tarkistettiin. Tulos: **No errors or warnings to show**. Validatorin havaitsemia HTML-virheitä ei ollut korjattavaksi.
+- **e / tekoälyavusteinen parannus:** Lighthouse huomautti riittämättömästä tekstin kontrastista. CSS:n `footer`-tekstin väri muutettiin sävystä `#7f8c8d` sävyyn `#4b5963`. Laskennallinen kontrastisuhde vaaleaa sivutaustaa vasten muuttui noin 3,21:1 → 6,67:1. Accessibility nousi uusintatestissä 96 → 100.
+
+**Tarkistusten rajaus:** Pisteet ovat julkaistun etusivun Lighthouse Desktop -mittauksesta, ja W3C-tulos koskee julkaistua `index.html`-sivua. Lighthouse ei yksin takaa saavutettavuutta kaikissa käyttötilanteissa.
+
+Kuvakaappaukset, havainnot, korjaus ja CI/CD:n liiketoimintahyötyjen pohdinta käsitellään loppuraportin luvussa 6. Viikon 5 Moodle-palautus sisältää repositorion ja julkisen sivun URL-osoitteet erillisessä TXT-tiedostossa.
