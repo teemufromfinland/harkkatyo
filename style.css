@@ -112,7 +112,8 @@ a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    color: #7f8c8d;
+    /* Viikko 5: WCAG AA -kontrastikorjaus (aiemmin #7f8c8d / 3,21:1). */
+    color: #4b5963;
     font-size: 0.9rem;
 }
 
