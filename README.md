@@ -36,3 +36,16 @@ Tämä repositorio sisältää Johdatus sovelluskehitykseen -kurssin viikkoteht�
 **Rajapinta:** [Open-Meteo](https://open-meteo.com/en/docs), ei vaadi API-avainta tähän ei-kaupalliseen kurssiharjoitukseen. Säädata tulee rajapinnasta, eikä sitä ole kirjoitettu valmiiksi sivulle.
 
 Viikkojen 1–2 HTML- ja CSS-ratkaisut on toteutettu käsin Texturilla. Viikkojen 3–4 JavaScript-osuuksien rakentamisessa on hyödynnetty tekoälyä. Opiskelija testaa rajapinnan itse ja kuvaa kokeilun, selainkuvat ja pohdinnan erikseen kurssin loppuraportin luvussa 5. Sitä ei palauteta viikon 4 koodien yhteydessä.
+
+## Viikko 5 – GitHub Pages, CI/CD ja laadunvarmistus
+
+Tavoitteena on julkaista tämä sama repositorio GitHub Pagesiin ja testata, että `main`-haaran uusi commit näkyy sivustolla automaattisesti. Sivuston julkaisu ja laaturaportit ovat tätä README-päivitystä tehtäessä vielä kesken.
+
+1. Ota GitHubissa Pages käyttöön: **Settings → Pages → Deploy from a branch → main → / (root) → Save**.
+2. Avaa sivun julkinen osoite GitHub Pagesin ilmoituksesta ja varmista, että kaikki sivut, kuvat ja sääpainike toimivat.
+3. Tee pieni uusi commit `index.html`-tiedostoon ja todenna sen automaattinen päivittyminen julkiselle sivulle (CI/CD-koe).
+4. Aja julkaistulle sivulle Lighthouse ja tallenna tuloskuva loppuraportin lukuun 6.
+5. Tarkista HTML W3C:n validatorilla, korjaa mahdollinen huomautus tai kirjaa raporttiin puhdas testitulos.
+6. Tulkitse tuloksia ja kuvaa tehdyt parannukset tai pohdi tilaajan liiketoimintahyötyjä loppuraportissa.
+
+Viikon 5 Moodle-palautukseen tarvitaan erillinen .txt-tiedosto, jossa on sekä repositorion linkki että todettu, toimiva julkaisulinkki.
