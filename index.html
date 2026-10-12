@@ -51,6 +51,27 @@
             <p>Painikkeen toiminta on toteutettu JavaScriptillä:</p>
             <button type="button" id="naytaViesti">Kokeile JavaScript-painiketta</button>
         </section>
+
+        <!-- Viikko 4: ulkoinen API, osiot a-d -->
+        <section id="viikko4">
+            <h2>Viikko 4: Säärajapinnan kokeilu</h2>
+            <p>Valitse kaupunki ja hae ajankohtainen sää Open-Meteo-palvelusta. JavaScript hakee datan <code>fetch()</code>-komennolla ja tulostaa alkuperäisen JSON-vastauksen myös selaimen konsoliin.</p>
+
+            <div class="api-ohjaimet">
+                <label for="saaKaupunki">Valitse kaupunki</label>
+                <select id="saaKaupunki">
+                    <option value="jyvaskyla">Jyväskylä</option>
+                    <option value="helsinki">Helsinki</option>
+                    <option value="vaasa">Vaasa</option>
+                    <option value="tampere">Tampere</option>
+                </select>
+                <button type="button" id="haeSaa">Hae sää</button>
+            </div>
+
+            <p id="saaTila" role="status" aria-live="polite">Valitse kaupunki ja paina Hae sää.</p>
+            <div id="saaTulos" class="api-tulos" aria-live="polite"></div>
+            <p class="api-lahde">Tietolähde: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Rajapinnan tietoja haetaan vasta painikkeen painalluksella.</p>
+        </section>
     </main>
 
     <footer>
@@ -59,5 +80,7 @@
 
     <!-- Viikko 3: kytkentä ulkoiseen JavaScript-tiedostoon -->
     <script src="script.js"></script>
+    <!-- Viikko 4: API-haku omassa JavaScript-tiedostossaan -->
+    <script src="script4.js"></script>
 </body>
 </html>
